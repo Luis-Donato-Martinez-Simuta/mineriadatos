@@ -12,6 +12,10 @@ phases:
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
+      - echo Logging in to Docker Hub...
+      - DOCKER_USERNAME=luisdonatomartinezsimuta 
+      - DOCKER_PASSWORD=incriptado.2021
+      - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"   
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .

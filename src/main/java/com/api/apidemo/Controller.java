@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @GetMapping("/status")
     public String status() {
-        return "{\n    \"status\":\"200\",\n    \"mensage_global\":\"okey\"\n}";
+        return "{\n    \"status\":\"200\",\n    \"mensage_global\":\"okey ya quedo profe :3\"\n}";
     }
-
 }
 
 
